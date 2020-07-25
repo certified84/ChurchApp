@@ -7,8 +7,8 @@
     android:background="@drawable/background">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,18 +25,69 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/facebook"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="80dp"
                     android:onClick="clickHandler"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView3"
-                    app:srcCompat="@drawable/back" />
+                    app:layout_constraintEnd_toStartOf="@+id/google"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="@+id/imageView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    app:srcCompat="@drawable/facebook" />
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="clickHandler"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/google"
+                    app:layout_constraintTop_toTopOf="@+id/google"
+                    app:srcCompat="@drawable/twitter"
+                    tools:layout_editor_absoluteX="568dp"
+                    tools:layout_editor_absoluteY="120dp" />
+
+                <ImageView
+                    android:id="@+id/google"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="clickHandler"
+                    app:layout_constraintEnd_toStartOf="@+id/twitter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/facebook"
+                    app:layout_constraintTop_toTopOf="@+id/facebook"
+                    app:srcCompat="@drawable/google"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="144dp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/editText5"
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:srcCompat="@drawable/line2" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="@+id/editText5"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:srcCompat="@drawable/line2" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/editText4"
                     android:layout_width="0dp"
                     android:layout_height="43dp"
                     android:layout_marginTop="156dp"
@@ -49,12 +100,11 @@
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/colorAccent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/back"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/editText5"
                     android:layout_width="0dp"
                     android:layout_height="43dp"
                     android:layout_marginTop="8dp"
@@ -65,124 +115,27 @@
                     android:inputType="textPassword"
                     android:textColor="@color/colorAccent"
                     android:textColorHint="@color/colorAccent"
-                    app:layout_constraintEnd_toEndOf="@+id/editText3"
-                    app:layout_constraintStart_toStartOf="@+id/editText3"
-                    app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/bold"
-                    android:text="LOG IN"
-                    android:textAlignment="center"
-                    android:textColor="@color/font"
-                    android:textSize="30sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                    app:layout_constraintEnd_toStartOf="@+id/textView2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView2"
-                    app:srcCompat="@drawable/line" />
-
-                <ImageView
-                    android:id="@+id/google"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:onClick="clickHandler"
-                    app:layout_constraintEnd_toStartOf="@+id/twitter"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/facebook"
-                    app:layout_constraintTop_toTopOf="@+id/facebook"
-                    app:srcCompat="@drawable/google" />
-
-                <ImageView
-                    android:id="@+id/twitter"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:onClick="clickHandler"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/google"
-                    app:layout_constraintTop_toTopOf="@+id/google"
-                    app:srcCompat="@drawable/twitter" />
-
-                <ImageView
-                    android:id="@+id/facebook"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:onClick="clickHandler"
-                    app:layout_constraintEnd_toStartOf="@+id/google"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="@+id/imageView7"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:srcCompat="@drawable/facebook" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:text="OR"
-                    android:textColor="@color/font"
-                    android:textSize="12dp"
-                    app:layout_constraintEnd_toEndOf="@+id/login_button"
-                    app:layout_constraintStart_toStartOf="@+id/login_button"
-                    app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
-                    app:layout_constraintTop_toTopOf="@+id/textView2"
-                    app:srcCompat="@drawable/line" />
+                    app:layout_constraintEnd_toEndOf="@+id/editText4"
+                    app:layout_constraintStart_toStartOf="@+id/editText4"
+                    app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
                 <Button
                     android:id="@+id/login_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:width="131dp"
                     android:height="41dp"
                     android:background="@drawable/button2"
                     android:fontFamily="@font/bold"
                     android:onClick="clickHandler"
-                    android:text="LOG IN"
+                    android:text="LOGIN"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView4"
-                    app:layout_constraintStart_toStartOf="@+id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/regular"
-                    android:text="forgot password?"
-                    android:textColor="@color/font"
-                    app:layout_constraintEnd_toEndOf="@+id/editText"
-                    app:layout_constraintStart_toStartOf="@+id/editText"
-                    app:layout_constraintTop_toBottomOf="@+id/editText" />
+                    app:layout_constraintEnd_toEndOf="@+id/editText5"
+                    app:layout_constraintStart_toStartOf="@+id/editText5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -197,7 +150,45 @@
                     app:layout_constraintEnd_toStartOf="@+id/tvRegister"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@+id/facebook" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/bold"
+                    android:text="LOGIN"
+                    android:textAlignment="center"
+                    android:textColor="@color/font"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.558"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:onClick="clickHandler"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView3"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="OR"
+                    android:textColor="@color/font"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="@+id/login_button"
+                    app:layout_constraintStart_toStartOf="@+id/login_button"
+                    app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
                 <TextView
                     android:id="@+id/tvRegister"
@@ -208,10 +199,20 @@
                     android:text="Sign up"
                     android:textColor="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/twitter"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView5"
                     app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="forgot password?"
+                    app:layout_constraintEnd_toEndOf="@+id/editText5"
+                    app:layout_constraintStart_toStartOf="@+id/editText5"
+                    app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
